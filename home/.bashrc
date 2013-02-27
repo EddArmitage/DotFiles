@@ -18,11 +18,6 @@ pathadd() {
 }
 
 #~~~PATH updates~~~
-if [[ "$platform" == 'mac' ]]
-then
-	pathadd "/usr/local/share/python"
-	pathadd "/Applications/LeJOS/bin"
-fi
 if [[ "$platform" == 'linux' ]]
 then
 	pathadd "/home/edd/bin"
@@ -42,7 +37,6 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 #~~~Framework/Environments~~~
 if [[ "$platform" == 'mac' ]]
 then
-	alias zf=/usr/local/ZendFrameworkCLI/bin/zf.sh
 	eval "$(rbenv init -)"
 elif [[ "$platform" == 'linux' ]]
 then 
