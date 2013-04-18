@@ -27,6 +27,12 @@ fi
 #~~~Environment Variables~~~
 export EDITOR=vim
 
+if [[ "$platform" == 'linux' ]]
+then
+	export JAVA_HOME=/usr/lib/jvm/default-java
+	export ORACLE_HOME=/usr/lib/oracle/11.2/client64
+fi
+
 #~~~Colours~~~
 #Allow some shiny, shiny colours.
 export CLICOLOR='true'
@@ -35,15 +41,16 @@ export CLICOLOR='true'
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
 #~~~Framework/Environments~~~
-if [[ "$platform" == 'mac' ]]
-then
-	eval "$(rbenv init -)"
-elif [[ "$platform" == 'linux' ]]
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+if [[ "$platform" == 'linux' ]]
 then 
 	export LD_LIBRARY_PATH=/usr/lib/oracle/11.2/client64/lib
 fi
 
 #~~~Aliasing~~~
+alias ls='ls --color=auto'
 if [[ "$platform" == 'mac' ]]
 then
 	#Add alias to rmtrash

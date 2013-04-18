@@ -1,0 +1,38 @@
+[ui]
+username = edward.armitage
+logtemplate = "\033[33mchangeset: {rev}:{node|short}\033[0m\ntags: {tags}\nbranch: {branches}\nuser: {author}\ndate: {date|date}\nsummary: {desc|strip|fill76}\n\n"
+ignore = ~/.hgignore
+
+[diff]
+ignorews = 1
+ignorewsamount = 1
+ignoreblanklines = 1
+showfunc = 1
+
+[extensions]
+pager =
+color = 
+purge =
+checkcommitsigs = /usr/share/pyshared/hgext/checkcommitsigs.py
+graphlog =
+hgext.extdiff =
+
+[pager]
+pager = LESS='FSRX' less
+ignore = version, help, update, serve, record
+
+[extdiff]
+cmd.meld = 
+
+[color]
+diff.trailingwhitespace = none
+
+[checkcommitsigs]
+openssl.pem = /home/edd/.ssh/id_rsa.pem
+openssl.path = /usr/bin/openssl
+openssl.capath = /etc/ssl/certs
+allow.unsigned.in = True
+debug = False
+
+[hooks]
+pretxncommit.verifyall = python:checkcommitsigs.verifyallhook
