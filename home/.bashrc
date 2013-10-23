@@ -21,6 +21,9 @@ pathadd() {
 if [[ "$platform" == 'linux' ]]
 then
 	pathadd "/home/edd/bin"
+elif [[ "$platform" == 'mac' ]]
+then
+	pathadd "/usr/local/bin"
 fi
 
 
