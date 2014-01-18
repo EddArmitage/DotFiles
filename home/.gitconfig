@@ -1,3 +1,5 @@
+[core]
+	excludesfile = ~/.gitignore
 [user]
 	name = Edd Armitage
 	email = edward.armitage@gmail.com
