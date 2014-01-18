@@ -5,3 +5,5 @@
 	email = edward.armitage@gmail.com
 [color]
 	ui = true
+[credential]
+	helper = osxkeychain
