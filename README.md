@@ -11,13 +11,13 @@ to files within a homesick repository, which typically exist in `~/.homesick/`.
 ##Bash
 
 ##Git
-My `.gitconfig` is pretty standard, with colours enabled and my user-details
-provided. I specify my global `.gitignore` file explicitly, and also enable
-KeyChain authentication on OS X.
+My [.gitconfig](home/.gitconfig) is pretty standard, with colours enabled and
+my user-details provided. I specify my global [.gitignore](home/.gitignore) file
+explicitly, and also enable KeyChain authentication on OS X.
 
-My `.gitignore` is pretty basic, with all logs, packages, bundles, executables
-and OS-generated meta-files ignored. I occasionally add files to this as I
-change my tooling.
+My [.gitignore](home/.gitignore) is pretty basic, with all logs, packages,
+bundles, executables and OS-generated meta-files ignored. I occasionally add
+files to this as I change my tooling.
 
 ##Mercurial
 
