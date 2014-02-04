@@ -13,9 +13,9 @@ showfunc = 1
 pager =
 color = 
 purge =
-checkcommitsigs = /usr/share/pyshared/hgext/checkcommitsigs.py
 graphlog =
 hgext.extdiff =
+mq =
 
 [pager]
 pager = LESS='FSRX' less
@@ -26,13 +26,3 @@ cmd.meld =
 
 [color]
 diff.trailingwhitespace = none
-
-[checkcommitsigs]
-openssl.pem = /home/edd/.ssh/id_rsa.pem
-openssl.path = /usr/bin/openssl
-openssl.capath = /etc/ssl/certs
-allow.unsigned.in = True
-debug = False
-
-[hooks]
-pretxncommit.verifyall = python:checkcommitsigs.verifyallhook
