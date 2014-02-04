@@ -1,5 +1,9 @@
+[core]
+	excludesfile = ~/.gitignore
 [user]
 	name = Edd Armitage
 	email = edward.armitage@gmail.com
 [color]
 	ui = true
+[credential]
+	helper = osxkeychain
