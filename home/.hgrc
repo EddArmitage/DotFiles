@@ -16,6 +16,7 @@ purge =
 checkcommitsigs = /usr/share/pyshared/hgext/checkcommitsigs.py
 graphlog =
 hgext.extdiff =
+mq =
 
 [pager]
 pager = LESS='FSRX' less
