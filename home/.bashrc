@@ -34,6 +34,9 @@ if [[ "$platform" == 'linux' ]]
 then
 	export JAVA_HOME=/usr/lib/jvm/default-java
 	export ORACLE_HOME=/usr/lib/oracle/11.2/client64
+elif [[ "$platform" == 'mac' ]]
+then
+	export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 fi
 
 #~~~Colours~~~
