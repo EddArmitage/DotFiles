@@ -20,4 +20,6 @@ bundles, executables and OS-generated meta-files ignored. I occasionally add
 files to this as I change my tooling.
 
 ##Mercurial
-
+My [.hgrc](home/.hgrc) file needs a bit of a review. It contains lots of things
+to try and improve the output of the basic mercurial commands, such as using
+`less` as a pager for viewing logs, and `meld` as a diff tool.
