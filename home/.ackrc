@@ -1,0 +1,2 @@
+#IDE Specific Directories can be ignored
+--ignore-dir=.idea
