@@ -13,7 +13,15 @@ set backspace=indent,eol,start
 set tw=110
 
 " Switch syntax highlighting on
-syntax on
+syntax enable
+set background=dark
+colorscheme solarized
+
+if has('gui_running')
+	set background=light
+else
+	set background=dark
+endif
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
