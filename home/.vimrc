@@ -18,8 +18,10 @@ syntax on
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
 
-" Show line numbers
+" Show line numbers and cursor position
 set number
+set ruler
+set rulerformat=%l,%v
 
 " Set Spell-Checking colours and language
 " Spell is toggled by <leader>s
