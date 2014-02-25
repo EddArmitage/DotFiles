@@ -34,6 +34,7 @@ if [[ "$platform" == 'linux' ]]
 then
 	export JAVA_HOME=/usr/lib/jvm/default-java
 	export ORACLE_HOME=/usr/lib/oracle/11.2/client64
+	export TERM=xterm-256color
 elif [[ "$platform" == 'mac' ]]
 then
 	export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
@@ -42,6 +43,10 @@ fi
 #~~~Colours~~~
 #Allow some shiny, shiny colours.
 export CLICOLOR='true'
+
+if [ -x /usr/bin/dircolors ]; then
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
 
 #Change LS colour scheme to be viewable on a black background.
 export LSCOLORS=gxfxcxdxbxegedabagacad
