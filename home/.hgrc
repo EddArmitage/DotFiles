@@ -3,9 +3,8 @@ username = edward.armitage
 logtemplate = "\033[33mchangeset: {rev}:{node|short}\033[0m\ntags: {tags}\nbranch: {branches}\nuser: {author}\ndate: {date|date}\nsummary: {desc|strip|fill76}\n\n"
 ignore = ~/.hgignore
 
+
 [diff]
-ignorews = 1
-ignorewsamount = 1
 ignoreblanklines = 1
 showfunc = 1
 
@@ -26,3 +25,10 @@ cmd.meld =
 
 [color]
 diff.trailingwhitespace = none
+glog.rev = red
+glog.refs = yellow
+glog.age = green
+glog.author = bold
+
+[alias]
+glog = log -G --template "{label('glog.rev',node|short)} - ({label('glog.refs',tags)}) {desc|firstline}({label('glog.age',date|age)})<{label('glog.author',author|person)}>"
