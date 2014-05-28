@@ -69,7 +69,7 @@ then
 fi
 
 #~~~Aliasing~~~
-alias ls='ls -G'
+alias ls='ls -G --color=auto'
 if [[ "$platform" == 'mac' ]]
 then
 	#Add alias to rmtrash
