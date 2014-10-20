@@ -64,9 +64,10 @@ if [[ "$platform" == 'mac' ]]
 then
 	source $(brew --prefix nvm)/nvm.sh
 
-	export PATH="$HOME/.jenv/bin:$PATH"
-	eval "$(jenv init -)"
 fi
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 #~~~Aliasing~~~
 alias ls='ls -G --color=auto'
