@@ -43,3 +43,6 @@ nmap <silent> <leader>s :set spell!<CR>
 
 " Set file type for .tex files to be latex
 let g:tex_flavor='latex'
+
+" Shortcuts
+map <C-n> :NERDTreeToggle<CR>
