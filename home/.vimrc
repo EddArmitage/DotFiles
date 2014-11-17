@@ -25,6 +25,9 @@ set number
 set ruler
 set rulerformat=%l,%v
 
+" Enable go auto-install
+let g:go_disable_autoinstall = 0 
+
 " Set Spell-Checking colours and language
 " Spell is toggled by <leader>s
 highlight clear SpellBad
