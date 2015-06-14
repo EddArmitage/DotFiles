@@ -17,5 +17,5 @@ if [ "$program" = "java" ]; then
   done
 fi
 
-export JENV_ROOT="/Users/edd/.jenv"
-exec "/usr/local/Cellar/jenv/201404260/libexec/libexec/jenv" exec "$program" "$@"
+export JENV_ROOT="/Users/Edd/.jenv"
+exec "/usr/local/Cellar/jenv/0.4.3/libexec/libexec/jenv" exec "$program" "$@"

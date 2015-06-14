@@ -70,7 +70,6 @@ export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
 #~~~Aliasing~~~
-alias ls='ls -G --color=auto'
 if [[ "$platform" == 'mac' ]]
 then
 	#Add alias to rmtrash
@@ -111,3 +110,19 @@ man() {
 		LESS_TERMCAP_us=$(printf "\e[1;32m") \
 		    man "$@"
 }
+alias vac='source VIRTUALENV/bin/activate'
+alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
+alias vac='source VIRTUALENV/bin/activate'
+alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
+alias vac='source VIRTUALENV/bin/activate'
+alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
+alias vac='source VIRTUALENV/bin/activate'
+alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
+alias vac='source VIRTUALENV/bin/activate'
+alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
+alias vac='source VIRTUALENV/bin/activate'
+alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
+alias vac='source VIRTUALENV/bin/activate'
+alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
+alias vac='source VIRTUALENV/bin/activate'
+alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'

@@ -14,7 +14,12 @@ set tw=110
 
 " Switch syntax highlighting on
 syntax enable
-set background=dark
+let g:solarized_termtrans = 1
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
 colorscheme solarized
 
 " Enable file type detection and do language-dependent indenting.
