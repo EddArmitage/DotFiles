@@ -11,15 +11,6 @@ Like most people, my initial Vim config was provided to me by a friend. I've
 since developed it to suit my tastes over time, although I still think it's
 far from perfect, as I remain a novice vim-user.
 
-###Pathogen
-Relatively recently I've been made aware of
-[Pathogen](https://github.com/tpope/vim-pathogen) to manage Vim plugins. I
-particuarly like it because I've been able to install it in such a way that I
-can install plugins into my
-[homesick](https://github.com/technicalpickles/homesick) repository as _git
-submodules_, giving me versioning without having to manually keep `foo.vim`
-files up to date.
-
 ##Bash
 
 ##Git

@@ -2,25 +2,14 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Setup Pathogen for plugin management"
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
 
 " Wrap lines at 110 chars
-set tw=110
+set tw=180
 
 " Switch syntax highlighting on
 syntax enable
-let g:solarized_termtrans = 1
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
-colorscheme solarized
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
@@ -30,8 +19,7 @@ set number
 set ruler
 set rulerformat=%l,%v
 
-" Enable go auto-install
-let g:go_disable_autoinstall = 0 
+let g:airline_theme='dracula'
 
 " Set Spell-Checking colours and language
 " Spell is toggled by <leader>s
