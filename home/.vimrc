@@ -40,3 +40,6 @@ let g:tex_flavor='latex'
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
