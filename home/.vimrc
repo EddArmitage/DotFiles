@@ -37,5 +37,6 @@ nmap <silent> <leader>s :set spell!<CR>
 " Set file type for .tex files to be latex
 let g:tex_flavor='latex'
 
-" Shortcuts
+" NERDTree
 map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
