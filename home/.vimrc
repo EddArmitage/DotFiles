@@ -16,8 +16,6 @@ filetype plugin indent on
 
 " Show line numbers and cursor position
 set number
-set ruler
-set rulerformat=%l,%v
 
 let g:airline_theme='dracula'
 
