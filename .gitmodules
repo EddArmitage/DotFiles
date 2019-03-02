@@ -7,3 +7,12 @@
 [submodule "home/.vim/pack/my-plugins/start/nerdtree"]
 	path = home/.vim/pack/my-plugins/start/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
+[submodule "home/.vim/home/.vim/pack/my-plugins/start/fugitive"]
+	path = home/.vim/home/.vim/pack/my-plugins/start/fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "home/.vim/pack/my-plugins/start/fugitive"]
+	path = home/.vim/pack/my-plugins/start/fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "home/.vim/pack/my-plugins/start/nerdtree-git-plugin"]
+	path = home/.vim/pack/my-plugins/start/nerdtree-git-plugin
+	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
