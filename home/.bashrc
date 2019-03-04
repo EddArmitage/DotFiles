@@ -30,44 +30,16 @@ fi
 #~~~Environment Variables~~~
 export EDITOR=vim
 
-if [[ "$platform" == 'linux' ]]
-then
-	export JAVA_HOME=/usr/lib/jvm/default-java
-	export ORACLE_HOME=/usr/lib/oracle/11.2/client64
-	export TERM=xterm-256color
-elif [[ "$platform" == 'mac' ]]
-then
-	export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-fi
-
-#~~~Colours~~~
-#Allow some shiny, shiny colours.
-export CLICOLOR='true'
-
-if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-fi
-
-#Change LS colour scheme to be viewable on a black background.
-export LSCOLORS=gxfxcxdxbxegedabagacad
-
 #~~~Framework/Environments~~~
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-if [[ "$platform" == 'linux' ]]
-then 
-	export LD_LIBRARY_PATH=/usr/lib/oracle/11.2/client64/lib
-fi
-
-if [[ "$platform" == 'mac' ]]
-then
-	source $(brew --prefix nvm)/nvm.sh
-
-fi
-
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
+	source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 #~~~Aliasing~~~
 if [[ "$platform" == 'mac' ]]
@@ -89,13 +61,23 @@ then
 fi
 
 #~~~Autocompletions~~~
-#Do funky autocompletion in SSH. Uses .bash_history
 complete -W "$(echo $(grep '^ssh ' ~/.bash_history | sort -u | sed 's/^ssh //'))" ssh
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 if [[ "$platform" == 'mac' ]]
 then
 	#Do funky autocompletion for homebrew
-	source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+	source "$(brew --prefix)/etc/bash_completion.d/brew"
+fi
+
+alias weather='curl -4 http://wttr.in/London'
+
+
+#~~~Prompt~~~
+
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
 #~~~Man Pages~~~
@@ -110,19 +92,3 @@ man() {
 		LESS_TERMCAP_us=$(printf "\e[1;32m") \
 		    man "$@"
 }
-alias vac='source VIRTUALENV/bin/activate'
-alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
-alias vac='source VIRTUALENV/bin/activate'
-alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
-alias vac='source VIRTUALENV/bin/activate'
-alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
-alias vac='source VIRTUALENV/bin/activate'
-alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
-alias vac='source VIRTUALENV/bin/activate'
-alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
-alias vac='source VIRTUALENV/bin/activate'
-alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
-alias vac='source VIRTUALENV/bin/activate'
-alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'
-alias vac='source VIRTUALENV/bin/activate'
-alias rs='vac && VIRTUALENV/bin/python manage.py migrate && VIRTUALENV/bin/python manage.py collectstatic --noinput && VIRTUALENV/bin/python manage.py runserver'

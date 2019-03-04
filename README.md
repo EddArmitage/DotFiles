@@ -26,3 +26,8 @@ files to this as I change my tooling.
 My [.hgrc](home/.hgrc) file needs a bit of a review. It contains lots of things
 to try and improve the output of the basic mercurial commands, such as using
 `less` as a pager for viewing logs, and `meld` as a diff tool.
+
+
+## Required Dependencies
+* https://github.com/magicmonty/bash-git-prompt
+* https://github.com/starcraftman/zsh-git-prompt
