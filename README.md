@@ -34,6 +34,5 @@ to try and improve the output of the basic mercurial commands, such as using
 
 ## Required Dependencies
 * https://github.com/magicmonty/bash-git-prompt
-* https://github.com/starcraftman/zsh-git-prompt
 
  [personal-repo]: http://github.com/eddarmitage/dotfiles-personal

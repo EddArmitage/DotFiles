@@ -1,5 +1,7 @@
 #! /bin/bash
 
+export IGNOREEOF=3
+
 #Detect the current OS
 platform='unknown'
 unamestr=`uname`
@@ -31,8 +33,7 @@ fi
 export EDITOR=vim
 
 #~~~Framework/Environments~~~
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
 	source /usr/local/bin/virtualenvwrapper.sh
