@@ -6,6 +6,10 @@ across a number of machines. The basic functionality is achieved by creating
 [symlinks](http://en.wikipedia.org/wiki/Symbolic_link) in your home directory
 to files within a homesick repository, which typically exist in `~/.homesick/`.
 
+This repo contains most of my dotfiles. For some things, such as my
+`.gitconfig`, I maintain both a personal copy (in [this repo][personal-repo])
+and my work equivalents in a repo at work.
+
 ## Vim
 Like most people, my initial Vim config was provided to me by a friend. I've
 since developed it to suit my tastes over time, although I still think it's
@@ -31,3 +35,5 @@ to try and improve the output of the basic mercurial commands, such as using
 ## Required Dependencies
 * https://github.com/magicmonty/bash-git-prompt
 * https://github.com/starcraftman/zsh-git-prompt
+
+ [personal-repo]: http://github.com/eddarmitage/dotfiles-personal

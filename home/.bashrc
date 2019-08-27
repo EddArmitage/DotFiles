@@ -34,12 +34,13 @@ export EDITOR=vim
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
 if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
 	source /usr/local/bin/virtualenvwrapper.sh
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 #~~~Aliasing~~~
 if [[ "$platform" == 'mac' ]]
@@ -92,3 +93,8 @@ man() {
 		LESS_TERMCAP_us=$(printf "\e[1;32m") \
 		    man "$@"
 }
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/Edd/.sdkman"
+[[ -s "/Users/Edd/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/Edd/.sdkman/bin/sdkman-init.sh"

@@ -16,3 +16,6 @@
 [submodule "home/.vim/pack/my-plugins/start/nerdtree-git-plugin"]
 	path = home/.vim/pack/my-plugins/start/nerdtree-git-plugin
 	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
+[submodule "home/.vim/pack/my-plugins/start/typescript-vim"]
+	path = home/.vim/pack/my-plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
