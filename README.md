@@ -6,10 +6,6 @@ across a number of machines. The basic functionality is achieved by creating
 [symlinks](http://en.wikipedia.org/wiki/Symbolic_link) in your home directory
 to files within a homesick repository, which typically exist in `~/.homesick/`.
 
-This repo contains most of my dotfiles. For some things, such as my
-`.gitconfig`, I maintain both a personal copy (in [this repo][personal-repo])
-and my work equivalents in a repo at work.
-
 ## Vim
 Like most people, my initial Vim config was provided to me by a friend. I've
 since developed it to suit my tastes over time, although I still think it's
@@ -25,6 +21,10 @@ explicitly, and also enable KeyChain authentication on OS X.
 My [.gitignore](home/.gitignore) is pretty basic, with all logs, packages,
 bundles, executables and OS-generated meta-files ignored. I occasionally add
 files to this as I change my tooling.
+
+Additional config can be provided or overriden via a `.gitconfig.overrides`
+file. I do this, for example, to set my work credentials on work computers from
+a second homesick repository I keep on work's version control system.
 
 ## Mercurial
 My [.hgrc](home/.hgrc) file needs a bit of a review. It contains lots of things
